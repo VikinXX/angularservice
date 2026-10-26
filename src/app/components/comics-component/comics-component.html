@@ -1,0 +1,9 @@
+<h1>Comics</h1>
+@for(comic of comics; track comic) {
+  <div class="comic">
+    <h2>{{comic.titulo}}</h2>
+    <p>{{comic.descripcion}}</p>
+    <img src="{{comic.imagen}}" alt="">
+  </div>
+
+}

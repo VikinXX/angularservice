@@ -1,0 +1,7 @@
+<h1>Comic JSON</h1>
+<button (click)="cargarComics()">Cargar Comics</button>
+@for(comic of comics; track comic){
+    <h3>{{comic.titulo}}</h3>
+    <p>{{comic.descripcion}}</p>
+    <img src={{comic.imagen}} alt="">
+}
