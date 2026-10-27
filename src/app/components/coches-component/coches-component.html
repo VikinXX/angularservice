@@ -1,0 +1,7 @@
+
+<h1>Coches</h1>
+@for(coche of coches; track coche){
+    <h2>{{coche.idcoche}}. {{coche.marca}} {{coche.modelo}}</h2>
+    <p>Conductor: {{coche.conductor}}</p>
+    <img src="{{coche.imagen}}" alt="">
+}   

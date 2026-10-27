@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Comic } from '../models/Comic';
+import  global  from '../global';
 @Injectable()
 
 export class ServiceComics {

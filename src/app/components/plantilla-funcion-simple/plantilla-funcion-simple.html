@@ -1,0 +1,22 @@
+<h1>Plantilla</h1>
+
+<form #idformulario="ngForm" (ngSubmit)="getPlantillas()">
+    <select #funcion>
+        @for(funcion of funciones; track funcion){
+            <option value="{{funcion}}">{{funcion}}</option>
+        }
+    </select>
+    <br>
+    <button>Mostrar Plantilla</button>
+</form>
+
+@if(plantillas.length > 0){
+    @for(plantilla of plantillas; track plantilla){
+        <h2>{{plantilla.idEmpleado}}</h2>
+        <p>{{plantilla.apellido}}</p>
+        <p>Turno: {{plantilla.turno}}</p>
+        <p>Salario: {{plantilla.salario}}</p>
+
+    }
+
+}
