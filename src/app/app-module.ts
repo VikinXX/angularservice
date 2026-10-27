@@ -14,6 +14,7 @@ import { ServiceCoches } from './services/service.coches';
 import { PlantillaFuncionSimple } from './components/plantilla-funcion-simple/plantilla-funcion-simple';
 import { ServicePlantilla } from './services/service.plantilla';
 import { FormsModule } from '@angular/forms';
+import { PlantillaFuncionMultiple } from './components/plantilla-funcion-multiple/plantilla-funcion-multiple';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     CochesComponent,
     PlantillaFuncionSimple,
+    PlantillaFuncionMultiple,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
@@ -32,7 +34,7 @@ import { FormsModule } from '@angular/forms';
     ServicePersona,
     ServiceCoches,
     ServicePlantilla,
-    provideHttpClient()
+    provideHttpClient(),
   ],
   bootstrap: [App],
 })

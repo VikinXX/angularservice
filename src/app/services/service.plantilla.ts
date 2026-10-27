@@ -18,4 +18,16 @@ export class ServicePlantilla{
         return this._http.get(environment.urlApiPlantillas + 'api/Plantilla/PlantillaFuncion/' + funcion);
     }
 
+    getPlantillasMultiple(funciones: string[]): Observable<any> {
+        let path = environment.urlApiPlantillas + 'api/Plantilla/PlantillaFunciones?funcion=';
+        for(let i = 0 ; i < funciones.length ; i++ ){
+            if(i === 0){
+                path += funciones[i];
+            }else{
+                path += '&funcion=' + funciones[i];
+            }
+        }
+        return this._http.get(path);
+    }
+
 }

@@ -1,0 +1,23 @@
+<h1>Plantilla Multiple</h1>
+
+<form #idformulario="ngForm" (ngSubmit)="getPlantillasMultiple()">
+    <!-- Mostrar 3 valores en el select -->
+    <select #funcion multiple size="3">
+        @for(funcion of funciones; track funcion){
+            <option value="{{funcion}}">{{funcion}}</option>
+        }
+    </select>
+    <br>
+    <button>Mostrar Plantilla</button>
+</form>
+
+@if(plantillas.length > 0){
+    @for(plantilla of plantillas; track plantilla){
+        <h2>{{plantilla.idEmpleado}}</h2>
+        <p>{{plantilla.apellido}}</p>
+        <p>Turno: {{plantilla.turno}}</p>
+        <p>Salario: {{plantilla.salario}}</p>
+
+    }
+
+}
